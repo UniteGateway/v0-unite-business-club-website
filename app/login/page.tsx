@@ -4,11 +4,19 @@ import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { Mail, Lock, Eye, EyeOff } from 'lucide-react';
 
 export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
+  const router = useRouter();
+
+  const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    // Simulate login - in production, this would validate credentials
+    router.push('/dashboard');
+  };
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -21,7 +29,7 @@ export default function Login() {
               <p className="text-gray-600">Sign in to your account</p>
             </div>
 
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleLogin}>
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                   Email Address
@@ -33,6 +41,7 @@ export default function Login() {
                     id="email"
                     placeholder="you@example.com"
                     className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                    required
                   />
                 </div>
               </div>
@@ -48,6 +57,7 @@ export default function Login() {
                     id="password"
                     placeholder="••••••••"
                     className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                    required
                   />
                   <button
                     type="button"
