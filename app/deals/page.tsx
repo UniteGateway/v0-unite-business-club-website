@@ -2,6 +2,7 @@ import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { HeroSection } from '@/components/hero-section';
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 import Link from 'next/link';
 import { TrendingUp, Tag, Clock } from 'lucide-react';
 
@@ -67,6 +68,20 @@ export default function Deals() {
           description="Access exclusive discounts and special offers from trusted partners available only to UBC members."
           backgroundGradient={true}
         />
+
+        {/* Banner Image */}
+        <section className="py-8 md:py-12 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="relative w-full h-64 md:h-96 rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src="/images/deals-banner.jpg"
+                alt="Exclusive deals and discounts"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </section>
 
         {/* Deals Grid */}
         <section className="py-16 md:py-24 bg-gray-50">

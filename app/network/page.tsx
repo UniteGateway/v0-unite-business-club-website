@@ -2,6 +2,7 @@ import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { HeroSection } from '@/components/hero-section';
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 import Link from 'next/link';
 import { Search, Filter, MessageSquare, UserPlus } from 'lucide-react';
 
@@ -67,6 +68,20 @@ export default function Network() {
           description="Browse and connect with thousands of business leaders, entrepreneurs, and professionals in your industry."
           backgroundGradient={true}
         />
+
+        {/* Banner Image */}
+        <section className="py-8 md:py-12 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="relative w-full h-64 md:h-96 rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src="/images/network-banner.jpg"
+                alt="Professional network connections"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </section>
 
         {/* Search and Filter */}
         <section className="py-8 bg-white border-b border-gray-200">

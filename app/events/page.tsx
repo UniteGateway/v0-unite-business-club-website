@@ -2,6 +2,7 @@ import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { HeroSection } from '@/components/hero-section';
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 import Link from 'next/link';
 import { Calendar, MapPin, Users, Clock } from 'lucide-react';
 
@@ -73,6 +74,20 @@ export default function Events() {
           description="Attend world-class conferences, workshops, and networking events designed to boost your business growth and build meaningful relationships."
           backgroundGradient={true}
         />
+
+        {/* Banner Image */}
+        <section className="py-8 md:py-12 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="relative w-full h-64 md:h-96 rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src="/images/events-banner.jpg"
+                alt="Business events and conferences"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </section>
 
         {/* Events List */}
         <section className="py-16 md:py-24 bg-gray-50">

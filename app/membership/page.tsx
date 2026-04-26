@@ -2,6 +2,7 @@ import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { HeroSection } from '@/components/hero-section';
 import { PricingCard } from '@/components/pricing-card';
+import Image from 'next/image';
 
 export default function Membership() {
   const plans = [
@@ -62,6 +63,20 @@ export default function Membership() {
           description="Select the membership tier that best fits your business needs and start unlocking exclusive benefits today."
           backgroundGradient={true}
         />
+
+        {/* Banner Image */}
+        <section className="py-8 md:py-12 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="relative w-full h-64 md:h-96 rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src="/images/membership-banner.jpg"
+                alt="Premium membership tiers"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </section>
 
         {/* Pricing Cards */}
         <section className="py-16 md:py-24 bg-gray-50">

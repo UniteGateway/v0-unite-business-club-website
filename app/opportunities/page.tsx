@@ -2,6 +2,7 @@ import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { HeroSection } from '@/components/hero-section';
 import { OpportunityCard } from '@/components/opportunity-card';
+import Image from 'next/image';
 import { Filter, Search } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -73,6 +74,20 @@ export default function Opportunities() {
           description="Browse thousands of investment opportunities, partnerships, and business deals curated exclusively for our members."
           backgroundGradient={true}
         />
+
+        {/* Banner Image */}
+        <section className="py-8 md:py-12 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="relative w-full h-64 md:h-96 rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src="/images/opportunities-banner.jpg"
+                alt="Business opportunities"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </section>
 
         {/* Search and Filter */}
         <section className="py-8 bg-white border-b border-gray-200 sticky top-16 z-40">

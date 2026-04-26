@@ -4,6 +4,7 @@ import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { HeroSection } from '@/components/hero-section';
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { useState } from 'react';
 
@@ -40,6 +41,20 @@ export default function Contact() {
           description="Have questions? We&apos;d love to hear from you. Reach out to our team and we&apos;ll respond as soon as possible."
           backgroundGradient={true}
         />
+
+        {/* Banner Image */}
+        <section className="py-8 md:py-12 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="relative w-full h-64 md:h-96 rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src="/images/contact-banner.jpg"
+                alt="Get in touch with us"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </section>
 
         {/* Contact Form and Info */}
         <section className="py-16 md:py-24 bg-white">

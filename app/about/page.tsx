@@ -2,6 +2,7 @@ import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { HeroSection } from '@/components/hero-section';
 import { FeatureCard } from '@/components/feature-card';
+import Image from 'next/image';
 import { Users, Target, Lightbulb, Globe } from 'lucide-react';
 
 export default function About() {
@@ -15,6 +16,20 @@ export default function About() {
           description="Since our founding, we've been connecting business leaders, entrepreneurs, and innovators to create meaningful relationships and unlock unlimited opportunities for growth."
           backgroundGradient={true}
         />
+
+        {/* Banner Image */}
+        <section className="py-8 md:py-12 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="relative w-full h-64 md:h-96 rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src="/images/about-banner.jpg"
+                alt="Global business community"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </section>
 
         {/* Mission & Vision */}
         <section className="py-16 md:py-24 bg-white">

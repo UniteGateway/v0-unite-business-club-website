@@ -3,6 +3,7 @@ import { Footer } from '@/components/footer';
 import { HeroSection } from '@/components/hero-section';
 import { FeatureCard } from '@/components/feature-card';
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 import Link from 'next/link';
 import { Users, BookOpen, Lightbulb, MessageCircle } from 'lucide-react';
 
@@ -56,6 +57,20 @@ export default function Community() {
           description="Connect with like-minded professionals, share insights, and collaborate with members in your industry through our specialized circles."
           backgroundGradient={true}
         />
+
+        {/* Banner Image */}
+        <section className="py-8 md:py-12 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="relative w-full h-64 md:h-96 rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src="/images/community-banner.jpg"
+                alt="Community and business circles"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </section>
 
         {/* Circles Grid */}
         <section className="py-16 md:py-24 bg-gray-50">

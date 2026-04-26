@@ -2,6 +2,7 @@ import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { HeroSection } from '@/components/hero-section';
 import { FeatureCard } from '@/components/feature-card';
+import Image from 'next/image';
 import {
   Users,
   Briefcase,
@@ -87,6 +88,20 @@ export default function Benefits() {
           description="Access a comprehensive suite of tools, services, and opportunities designed to help your business thrive in our global community."
           backgroundGradient={true}
         />
+
+        {/* Banner Image */}
+        <section className="py-8 md:py-12 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="relative w-full h-64 md:h-96 rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src="/images/benefits-banner.jpg"
+                alt="Exclusive member benefits"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </section>
 
         {/* Benefits Grid */}
         <section className="py-16 md:py-24 bg-gray-50">
